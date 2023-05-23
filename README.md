@@ -7,7 +7,7 @@ Unicycler 是一個可以同時用long reads和short reads組裝genome的工具�
 
 
 
-Unicycler is a tool that allows for genome assembly using both long reads and short reads. 
-I have written a script using ChatGPT that automates the process of genome assembly.
-Please notice your sample file name. 
-The "S1" in the iSeq data must correspond to "barcode01" in the ONT data, and so on.
+Unicycler is a tool that allows for genome assembly using both long reads and short reads.   
+I have written a script using ChatGPT that automates the process of genome assembly.  
+Please notice your sample file name.   
+The "S1" in the iSeq data must correspond to "barcode01" in the ONT data, and so on.  
