@@ -35,15 +35,6 @@ do
   # 構建輸出目錄路徑
   output_subdir="${output_dir}/barcode$(printf "%02d" $i)"
 
-  # 判斷是否找到 R1 和 R2 檔案
-  if [ -n "$r1_file" ] && [ -n "$r2_file" ]; then
-    # 找到 R1 和 R2 檔案，執行 unicycler 指令
-    unicycler -1 "$r1_file" -2 "$r2_file" -l "$input_file" -o "$output_subdir"
-  else
-    # 未找到 R1 或 R2 檔案，或是兩者只有其一
-    # 在輸出資料夾中創建一個文字檔，紀錄未使用的檔案名稱
-    unused_file="$output_subdir/unused_files.txt"
-    echo "R1 File: $r1_file" > "$unused_file"
-    echo "R2 File: $r2_file" >> "$unused_file"
-  fi
-done
+  
+ unicycler -1 "$r1_file" -2 "$r2_file" -l "$input_file" -o "$output_subdir"
+
